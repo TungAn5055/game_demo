@@ -28,7 +28,8 @@ public class ChibiCharacter extends GameObject {
     // Vận tốc di chuyển của nhân vật (pixel/milisecond).
     public static final float VELOCITY = 0.1f;
 
-    private int movingVectorX = 10;
+    // hướng di chuyển cho nhân vật (tọa độ vecto x, y )
+    private int movingVectorX = 5;
     private int movingVectorY = 5;
 
     private long lastDrawNanoTime =-1;
@@ -37,7 +38,7 @@ public class ChibiCharacter extends GameObject {
 
     public ChibiCharacter(GameSurface gameSurface, Bitmap image, int x, int y) {
         super(image, 4, 3, x, y);
-
+    //?
         this.gameSurface= gameSurface;
 
         this.topToBottoms = new Bitmap[colCount]; // 3

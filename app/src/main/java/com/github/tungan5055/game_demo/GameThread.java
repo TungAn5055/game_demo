@@ -14,6 +14,7 @@ public class GameThread extends Thread {
         this.surfaceHolder= surfaceHolder;
     }
 
+
     @Override
     public void run()  {
         long startTime = System.nanoTime();

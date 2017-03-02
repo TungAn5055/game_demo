@@ -7,20 +7,19 @@ import android.graphics.Bitmap;
 
 public class GameObject {
     protected Bitmap image;
-
+// Số hàng số cột của ảnh
     protected final int rowCount;
     protected final int colCount;
-
+// thông số của toàn bộ ảnh
     protected final int WIDTH;
     protected final int HEIGHT;
-
+// thông số của ảnh con sẽ cắt từ ảnh to
     protected final int width;
-
-
     protected final int height;
+// Tọa độ trên screen
     protected int x;
     protected int y;
-
+//  tách lấy nhân vật.
     public GameObject(Bitmap image, int rowCount, int colCount, int x, int y)  {
 
         this.image = image;
@@ -37,7 +36,7 @@ public class GameObject {
         this.height= this.HEIGHT/ rowCount;
     }
 
-
+// Khởi tạo một bitmap chứa thông tin của ảnh, như kích thước,
     protected Bitmap createSubImageAt(int row, int col)  {
         // createBitmap(bitmap, x, y, width, height).
         Bitmap subImage = Bitmap.createBitmap(image, col* width, row* height ,width,height);
